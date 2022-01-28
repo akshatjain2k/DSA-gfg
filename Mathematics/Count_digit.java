@@ -1,4 +1,5 @@
 package Mathematics;
+
 import java.util.Scanner;
 
 public class Count_digit {
@@ -6,6 +7,8 @@ public class Count_digit {
         Scanner in = new Scanner(System.in);
         int ans = num();
         System.out.println(ans);
+
+        String a = in.nextLine();
     }
 
     static int num() {
