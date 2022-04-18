@@ -1,4 +1,4 @@
-public class count_1s {
+public class Count_1s {
 
     // Naive Solution
 

@@ -7,6 +7,9 @@ public class Median_2_sorted_array {
     // }
 
     public static void main(String[] args) {
+
+        int mid1, mid2;
+        double fmid;
         int[] arr1 = { 10, 20, 30, 40, 50 };
         int[] arr2 = { 5, 15, 25, 35, 45 };
 
@@ -19,11 +22,14 @@ public class Median_2_sorted_array {
 
         Arrays.sort(arr3);
 
-            if(arr3.length % 2 == 0)
-                System.out.println(arr3[arr3.length/2]);
-            else{
-                System.out.println(arr3[arr3.length/2]);
-            
+        if (arr3.length % 2 == 0) {
+            mid1 = arr3.length / 2;
+            mid2 = mid1 - 1;
+            fmid = (arr3[mid1] + arr3[mid2]) / 2;
+
+            System.out.println(fmid);
+        } else {
+            System.out.println(arr3[arr3.length / 2]);
         }
 
     }
