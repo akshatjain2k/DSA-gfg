@@ -1,0 +1,11 @@
+/*
+ * Stability In Sorting Algorithms
+ * 
+ * arr[] = [("Anil", 50), ("Ayan", 80), ("Piyush", 50), ("Ramesh", 80)]
+ * 
+ * Stable arr[] = [("Anil", 50),("Piyush", 50), ("Ayan", 80),("Ramesh", 80) ]
+ * UnStable arr[] = [("Piyush", 50), ("Anil", 50), ("Ayan", 80),("Ramesh", 80)]
+ * 
+ * Stable Algorithms:- Bubble Sort, Insertion Sort, Merge Sort
+ * UnStable Algorithms:- Selection Sort, Quick sort, Heap Sort
+ */
