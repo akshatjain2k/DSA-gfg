@@ -60,7 +60,6 @@ public class bubble_sort {
     // }
     // }
     // }
-
     public static void main(String[] args) {
         int[] arr = { 2, 10, 8, 47 };
         int n = arr.length - 1;

@@ -1,26 +1,40 @@
 public class selection_sort {
 
-    static int selectionSort(int[] arr, int n) {
-        int min = 0;
+    static void selectionSort(int[] arr, int n) {
         for (int i = 0; i < n; i++) {
-            if (min > arr[i]) {
-                min = arr[i];
+            int min_index = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[min_index]) {
+                    min_index = j;
+                }
+                int temp = arr[min_index];
+                arr[min_index] = arr[i];
+                arr[i] = temp;
             }
         }
-        return min;
+    }
+
+    static void printArray(int arr[]) {
+        int n = arr.length;
+        for (int i = 0; i < n; ++i)
+            System.out.print(arr[i] + " ");
+        System.out.println();
     }
 
     public static void main(String[] args) {
-        int[] arr = { 2, 10, 8, 47 };
+        int[] arr = { 2, 10, 8, 1, 47 };
         int n = arr.length - 1;
-        System.out.println(selectionSort(arr, n));
+        selectionSort(arr, n);
+        printArray(arr);
+
     }
 }
 
 /*
- * Selection Sort:- FInd the minimum element and place it at 1st position then
- * find the 2nd minimum elemnt and place it 2nd position of array
+ * Selection Sort:- FInd the minimum element and Swap with the first element in
+ * array AND find 2nd minimum and swap with 2nd element in the array
  * Does less memory writes compare to quick, merge, insertion sort etc.
+ * TIME COMPLEXITY = Theta(n^2)
+ * UnStable Sorting Algorithm
  * Basic Idea of HEAP SORT
- * Not STABLE
  */
