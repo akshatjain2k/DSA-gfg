@@ -24,7 +24,7 @@ public class selection_sort {
     public static void main(String[] args) {
         int[] arr = { 2, 10, 8, 1, 47 };
         int n = arr.length - 1;
-        selectionSort(arr, n);
+        selectionSort(arr, n); 
         printArray(arr);
 
     }
