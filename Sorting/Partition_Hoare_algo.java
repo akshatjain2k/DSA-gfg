@@ -1,11 +1,5 @@
 public class Partition_Hoare_algo {
 
-    static void swap(int a, int b) {
-        int temp = a;
-        a = b;
-        b = temp;
-    }
-
     static int hpartition(int[] a, int l, int h) {
         int pivot = a[l];
         int i = l - 1, j = h + 1;
@@ -15,13 +9,15 @@ public class Partition_Hoare_algo {
             } while (a[i] < pivot);
             do {
                 j--;
-            } while (a[i] > pivot);
+            } while (a[j] > pivot);
             if (i >= j) {
                 return j;
 
             }
-            swap(a[i], a[j]);
-
+            int temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+            System.out.println(i);
         }
     }
 

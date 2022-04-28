@@ -1,0 +1,17 @@
+
+/*
+ * 1. Divide and Conquer Algo
+ * 2. Worst Case Time: O(n^2)
+ * 3. Despite O(n^2) worst case, it is considered faster because of the
+ * following reasons:
+ * a. In-Place - uses aux space to recursion call , doesn't use for copy element
+ * b. Cache friendly - works on same array and more item in cache
+ * c. Average case in O(nlogn)
+ * d. Tail Recursive - if a recursive function does a recursive call as a last
+ * thing than that function is tail recursive
+ * 4. Partition in key function(Naive(Stable in quick sort), Lomuto(Unstable),
+ * Hoare(Unstable))
+ */
+
+ if you don't need stability - Quick sort is best
+ if you need stability - Merge Sort is prefered
