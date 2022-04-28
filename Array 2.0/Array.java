@@ -21,4 +21,7 @@ public class Array {
 
         makeArr();
     }
+
+    public static void sort(int[] c) {
+    }
 }

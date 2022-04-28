@@ -57,7 +57,7 @@ public class merge_sort {
         int[] arr1 = { 10, 15, 20 };
         int[] arr2 = { 5, 6, 6, 15 };
         // merge2arrayusingsort(arr1, arr2);
-        merge2Array(arr1, arr2, 3, 4);
+        merge2Array(arr1, arr2, arr1.length, arr2.length);
 
     }
 
