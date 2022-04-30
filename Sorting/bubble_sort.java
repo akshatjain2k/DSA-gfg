@@ -39,32 +39,33 @@ public class bubble_sort {
             System.out.println(arr[i]);
         }
     }
-    // SOMETHING WRONG IN THE CODE BELOW
-    // static void bubble_Sort(int[] arr, int n) {
-    // for (int i = 0; i < n; i++) {
-    // boolean swapped = false;
 
-    // for (int j = 0; j < n - i; j++) {
-    // if (arr[j] > arr[j + 1]) {
-    // int temp = arr[j];
-    // arr[j] = arr[j + 1];
-    // arr[j + 1] = temp;
-    // swapped = true;
-    // }
-    // }
-    // if (swapped == false) {
-    // System.out.println("already Sorted");
-    // }
-    // else{
-    // System.out.println("We just Sort the array");
-    // }
-    // }
-    // }
+    // SOMETHING WRONG IN THE CODE BELOW
+    static void bubble_Sort(int[] arr, int n) {
+        boolean swapped;
+        for (int i = 0; i < n; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+            if (swapped == false)
+                break;
+        }
+        for (int i = 0; i <= n; i++) {
+            System.out.println(arr[i]);
+        }  
+    }
+
     public static void main(String[] args) {
         int[] arr = { 2, 10, 8, 47 };
         int n = arr.length - 1;
 
-        bubbleSort(arr, n);
+        bubble_Sort(arr, n);
     }
 }
 
