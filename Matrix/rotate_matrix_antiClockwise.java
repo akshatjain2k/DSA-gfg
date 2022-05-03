@@ -56,16 +56,14 @@ public class rotate_matrix_antiClockwise extends transpose_matrix {
             int start = 0;
             int end = r - 1;
 
-            while (start < end) {   
-                swapEle(a[start][i], a[end][i]);
+            while (start < end) {
+                temp[start][end] = a[start][i];
+                a[start][i] = a[end][i];
+                a[end][i] = temp[start][end];
+
                 start++;
                 end--;
             }
-
-
-
-
-            
         }
         printMatrix(a);
     }
