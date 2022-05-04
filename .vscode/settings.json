@@ -2,8 +2,10 @@
     "java.project.sourcePaths": [
         "Sorting",
         "Searching",
+        "Matrix",
+        "Mathematics",
         "Array 2.0",
         "Array",
-        "Matrix"
+        "String"
     ]
 }

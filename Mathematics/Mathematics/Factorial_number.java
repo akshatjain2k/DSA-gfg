@@ -1,5 +1,7 @@
 package Mathematics;
 
+import java.util.Scanner;
+
 public class Factorial_number {
 
     // public static void main(String[] args) {
@@ -12,6 +14,7 @@ public class Factorial_number {
     // }
 
     static int findfact(int n) {
+        
         int res = 1;
         if (n == 0)
             return 1;
