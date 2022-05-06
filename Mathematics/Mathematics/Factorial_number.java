@@ -13,7 +13,7 @@ public class Factorial_number {
     // System.out.println(res);
     // }
 
-    static int findfact(int n) {
+    protected static int findfact(int n) {
         
         int res = 1;
         if (n == 0)
