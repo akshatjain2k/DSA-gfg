@@ -1,11 +1,12 @@
 {
     "java.project.sourcePaths": [
+        "String",
         "Sorting",
         "Searching",
         "Matrix",
         "Mathematics",
         "Array 2.0",
         "Array",
-        "String"
+        "Linked List"
     ]
 }
