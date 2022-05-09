@@ -1,6 +1,8 @@
 package CIrcular_LL;
 
-public class implementation {
+import java.text.BreakIterator;
+
+public class delete_head {
     class Node {
         int data;
         Node next;
@@ -28,7 +30,40 @@ public class implementation {
         }
     }
 
-    void display1(Node head) {
+    public Node deleteHead() {
+        if (head == null) {
+            return null;
+
+        }
+        if (head.next == head) {
+            return null;
+
+        }
+        Node curr = head;
+        while (curr.next != head) {
+            curr = curr.next;
+        }
+        curr.next = head.next;
+        return curr.next;
+    }
+
+    // Efficient Solution
+    public Node efficientSolu() {
+        if (head == null) {
+            return null;
+
+        }
+        if (head.next == head) {
+            return null;
+
+        }
+        // Copy 2nd element data in first and then connect 1 with 3rd
+        head.data = head.next.data;
+        head.next = head.next.next;
+        return head;
+    }
+
+    static void display1(Node head) {
         Node curr = head;
         if (head == null) {
             System.out.println("Empty List");
@@ -42,37 +77,21 @@ public class implementation {
         }
     }
 
-    void display2(Node head) {
-        if (head == null)
-            return;
-        System.out.println(head.data + " ");
-        for (Node r = head.next; r != head; r = r.next) {
-            System.out.println(r.data + " ");
-        }
-    }
-
-    void display3(Node head) {
-        if (head == null)
-            return;
-        Node r = head;
-        do {
-            System.out.println(r.data + " ");
-            r = r.next;
-        } while (r != head);
-    }
-
     public static void main(String[] args) {
-        implementation clist = new implementation();
+        delete_head clist = new delete_head();
+
         clist.add(5);
         clist.add(15);
         clist.add(25);
         clist.add(35);
         clist.add(45);
-        System.out.println("Method- 1 of printing elements: ");
-        clist.display1(head);
-        System.out.println("Method- 2 of printing elements: ");
-        clist.display2(head);
-        System.out.println("Method- 3 of printing elements: ");
-        clist.display3(head);
+        System.out.println("elements: ");
+        delete_head.display1(head);
+
+        clist.efficientSolu();
+
+        System.out.println("elements: ");
+        delete_head.display1(head);
+
     }
 }

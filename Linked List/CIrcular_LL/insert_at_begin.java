@@ -1,6 +1,7 @@
 package CIrcular_LL;
 
-public class implementation {
+public class insert_at_begin {
+
     class Node {
         int data;
         Node next;
@@ -28,7 +29,26 @@ public class implementation {
         }
     }
 
-    void display1(Node head) {
+    public Node insertatFirst(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            newNode.next = newNode;
+            return newNode;
+
+        }
+        // Putting newNode between 1st and 2nd elemnt and then swapping 1st and 2nd
+
+        else {
+            newNode.next = head.next;
+            head.next = newNode;
+            int t = head.data;
+            head.data = newNode.data;
+            newNode.data = t;
+        }
+        return newNode;
+    }
+
+    static void display1(Node head) {
         Node curr = head;
         if (head == null) {
             System.out.println("Empty List");
@@ -42,37 +62,21 @@ public class implementation {
         }
     }
 
-    void display2(Node head) {
-        if (head == null)
-            return;
-        System.out.println(head.data + " ");
-        for (Node r = head.next; r != head; r = r.next) {
-            System.out.println(r.data + " ");
-        }
-    }
-
-    void display3(Node head) {
-        if (head == null)
-            return;
-        Node r = head;
-        do {
-            System.out.println(r.data + " ");
-            r = r.next;
-        } while (r != head);
-    }
-
     public static void main(String[] args) {
-        implementation clist = new implementation();
+        insert_at_begin clist = new insert_at_begin();
+
         clist.add(5);
         clist.add(15);
         clist.add(25);
         clist.add(35);
         clist.add(45);
-        System.out.println("Method- 1 of printing elements: ");
-        clist.display1(head);
-        System.out.println("Method- 2 of printing elements: ");
-        clist.display2(head);
-        System.out.println("Method- 3 of printing elements: ");
-        clist.display3(head);
+        System.out.println("elements: ");
+        insert_at_begin.display1(head);
+
+        clist.insertatFirst(12);
+
+        System.out.println("elements: ");
+        insert_at_begin.display1(head);
+
     }
 }
