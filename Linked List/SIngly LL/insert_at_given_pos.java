@@ -1,4 +1,4 @@
-public class Insert_at_begining extends LL_implementation {
+public class insert_at_given_pos {
     static Node head = null;
     static Node tail = null;
 
@@ -10,6 +10,24 @@ public class Insert_at_begining extends LL_implementation {
             data = x;
             next = null;
         }
+    }
+
+    static Node insertPos(Node head, int pos, int x) {
+        Node newNode = new Node(x);
+        if (pos == 1) {
+            newNode.next = head;
+            return newNode;
+        }
+
+        Node curr = head;
+        for (int i = 1; i <=  pos - 2 && curr != null; i++) {
+            curr = curr.next;
+        }
+        if (curr == null)
+            return head;
+        newNode.next = curr.next;
+        curr.next = newNode;
+        return head;
     }
 
     static void inserAt1st(int x) {
@@ -39,16 +57,17 @@ public class Insert_at_begining extends LL_implementation {
     }
 
     public static void main(String[] args) {
-        Insert_at_begining al = new Insert_at_begining();
-        al.inserAt1st(60);
-        al.inserAt1st(50);
-        al.inserAt1st(40);
-        al.inserAt1st(30);
-        al.inserAt1st(20);
-        al.inserAt1st(10);
+        insert_at_given_pos ip = new insert_at_given_pos();
+        ip.inserAt1st(50);
+        ip.inserAt1st(40);
+        ip.inserAt1st(30);
+        ip.inserAt1st(20);
+        ip.inserAt1st(10);
 
-        al.display(head);
+        ip.display(head);
+
+        ip.insertPos(head, 4, 45);
+
+        ip.display(head);
     }
-
-
- }
+}
