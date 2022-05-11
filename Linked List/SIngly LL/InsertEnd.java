@@ -8,7 +8,7 @@ class Node {
     }
 }
 
-public class Insert_at_end {
+public class InsertEnd {
 
     public static Node insertEnd(Node head, int x){
         Node newNode = new Node(x);

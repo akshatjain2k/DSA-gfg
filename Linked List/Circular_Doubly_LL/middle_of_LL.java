@@ -19,7 +19,7 @@ class Node {
             for (curr  = head; curr != null; curr = curr.next) {
                 count++;
             }
-            curr=head;
+            curr=head; 
             for (int i = 0; i < count / 2; i++) {
                 curr = curr.next;
             }
