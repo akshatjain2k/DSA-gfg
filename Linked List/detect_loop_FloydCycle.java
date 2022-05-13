@@ -1,4 +1,4 @@
-public class detectLoop {
+public class detect_loop_FloydCycle {
 
     Node head;
 
@@ -13,17 +13,20 @@ public class detectLoop {
         }
     }
 
+    // Floyd Cycles Algo always have 2 meeting points
+    // one  = head;
+    // Second = from where loop will start
+    // O(m+n)
     public boolean checkLoop() {
 
-        Node first = head;
-        Node second = head;
+        Node fast = head;
+        Node slow = head;
 
-        while (first != null && first.next != null) {
+        while (fast != null && fast.next != null) {
 
-            first = first.next.next;
-            second = second.next;
-
-            if (first == second) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (fast == slow) {
                 return true;
             }
         }
@@ -33,7 +36,7 @@ public class detectLoop {
 
     public static void main(String[] args) {
 
-        detectLoop linkedList = new detectLoop();
+        detect_loop_FloydCycle linkedList = new detect_loop_FloydCycle();
 
         linkedList.head = new Node(1);
         Node second = new Node(2);
@@ -55,7 +58,8 @@ public class detectLoop {
             linkedList.head = linkedList.head.next;
             i++;
         }
-
+        System.out.println();
+        System.out.println("We are using Floyd's Cycle Detection method");
         // call method to check loop
         boolean loop = linkedList.checkLoop();
         if (loop) {

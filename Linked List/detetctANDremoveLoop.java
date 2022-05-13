@@ -1,6 +1,5 @@
-public class detectLoop {
-
-    Node head;
+public class detetctANDremoveLoop {
+    static Node head;
 
     static class Node {
         int value;
@@ -13,27 +12,33 @@ public class detectLoop {
         }
     }
 
-    public boolean checkLoop() {
+    // O(m+n)
+    public void detectandRemove(Node head) {
 
-        Node first = head;
-        Node second = head;
+        Node fast = head;
+        Node slow = head;
 
-        while (first != null && first.next != null) {
+        while (fast != null && fast.next != null) {
 
-            first = first.next.next;
-            second = second.next;
-
-            if (first == second) {
-                return true;
+            slow = slow.next;
+            fast = fast.next.next;
+            if (fast == slow) {
+                break;
             }
         }
-
-        return false;
+        if (slow != fast)
+            return;
+        slow = head;
+        while (slow.next != fast.next) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        fast.next = null;
     }
 
     public static void main(String[] args) {
 
-        detectLoop linkedList = new detectLoop();
+        detetctANDremoveLoop linkedList = new detetctANDremoveLoop();
 
         linkedList.head = new Node(1);
         Node second = new Node(2);
@@ -47,7 +52,9 @@ public class detectLoop {
         // make loop in LinkedList
         fourth.next = second;
 
-        // printing node-value
+        System.out.println("Linked Listb after removing Loop ");
+        linkedList.detectandRemove(head);
+
         System.out.print("LinkedList: ");
         int i = 1;
         while (i <= 4) {
@@ -55,13 +62,6 @@ public class detectLoop {
             linkedList.head = linkedList.head.next;
             i++;
         }
-
-        // call method to check loop
-        boolean loop = linkedList.checkLoop();
-        if (loop) {
-            System.out.println("\nThere is a loop in LinkedList.");
-        } else {
-            System.out.println("\nThere is no loop in LinkedList.");
-        }
+  
     }
 }
