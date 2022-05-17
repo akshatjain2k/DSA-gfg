@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "String",
+        "Stack",
         "Sorting",
         "Searching",
         "Matrix",
@@ -8,6 +9,6 @@
         "Linked List",
         "Array 2.0",
         "Array",
-        "Stack"
+        "Queue"
     ]
 }
