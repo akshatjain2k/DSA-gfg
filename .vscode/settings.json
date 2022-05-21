@@ -4,11 +4,13 @@
         "Stack",
         "Sorting",
         "Searching",
+        "Queue",
         "Matrix",
         "Mathematics",
         "Linked List",
+        "Learning JAVA/Pattern",
         "Array 2.0",
         "Array",
-        "Queue"
+        "Deque"
     ]
 }
