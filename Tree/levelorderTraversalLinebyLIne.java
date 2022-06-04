@@ -60,11 +60,29 @@ public class levelorderTraversalLinebyLIne {
                 if (curr.left != null)
                     q.add(curr.left);
                 if (curr.right != null)
-                if (curr.right != null)
-                if (curr.right != null)
                     q.add(curr.right);
             }
             System.out.println();
+        }
+    }
+
+    static void iterativeleftprint(Node root){
+        if(root == null){
+            return ;
+        }
+        Queue<Node> q = new LinkedList<Node>();
+        q.add(root);
+        while(q.isEmpty() == false){
+            int count = q.size();
+            for (int i = 0; i < count; i++) {
+                Node curr = q.poll();
+                if(i == 0)
+                    System.out.println(curr.key + " ");
+                if(curr.left != null)
+                    q.add(curr.left);
+                if(curr.right != null)
+                    q.add(curr.right);
+                }
         }
     }
 
@@ -76,7 +94,7 @@ public class levelorderTraversalLinebyLIne {
         root.left.right = new Node(5);
         root.right.right = new Node(6);
         // printlevelOrderbyLINE(root);
-        printlevelLbLm2(root);
+        iterativeleftprint(root);
 
     }
 }
