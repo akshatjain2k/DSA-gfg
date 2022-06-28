@@ -23,7 +23,7 @@ public class SecondLargestElement {
             }
         }
 
-        return secmax;
+        return secmax; 
     }
 
     public static void main(String[] args) {

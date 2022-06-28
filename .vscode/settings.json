@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+        "Tree",
         "String",
         "Stack",
         "Sorting",
@@ -12,6 +13,6 @@
         "Deque",
         "Array 2.0",
         "Array",
-        "Tree"
+        "Binary Search Tree"
     ]
 }
