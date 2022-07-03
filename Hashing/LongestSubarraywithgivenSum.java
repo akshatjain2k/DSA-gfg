@@ -17,6 +17,7 @@ public class LongestSubarraywithgivenSum {
             // if (h.contains(pre_sum - sum)) {
             //     res = Math.max(res, i - h[pre_sum - sum]);
             // }
+             c4
         }
         return res;
     }
